@@ -1,4 +1,4 @@
-FROM easysoft/zentao:latest
+FROM easysoft/zentao:18.2
 
 MAINTAINER Rong.Jia 852203465@qq.com
 

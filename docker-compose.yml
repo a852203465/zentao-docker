@@ -1,11 +1,11 @@
 version: "3"
 services:
   zentao:
-    image: registry.cn-shenzhen.aliyuncs.com/a852203465/zentao:15.0.2
+    image: registry.cn-shenzhen.aliyuncs.com/a852203465/zentao:18.2
     container_name: zentao
     restart: always
     ports:
-      - 8020:80
+      - "8020:80"
     volumes:
       # 注意映射
       - /data/zentao:/www/zentaopms
@@ -13,10 +13,10 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
     networks:
-      - pm_net
+      - zentao_net
 
 networks:
-  pm_net:
+  zentao_net:
     external: true
 
 
